@@ -1,4 +1,7 @@
 {
+  "name": "Hairday",
+  "description": "Web application for hairdressing schedules",
+  "author": "Israel Teixeira",
   "scripts": {
     "server": "json-server --watch server.json --port 3333"
   },
