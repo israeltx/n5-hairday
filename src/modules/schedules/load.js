@@ -1,11 +1,17 @@
+import { scheduleFetchByDay } from "../../services/schedule-fetch-by-day.js";
 import { hoursLoad } from "../form/hours-load.js";
+
 
 // Select date input
 const selectedDate = document.getElementById('date')
 
-export function schedulesDay() {
+export async function schedulesDay() {
   // Get date from input
   const date = selectedDate.value
+
+  // Search the schedule on the API
+  const dailySchedules = await scheduleFetchByDay({date})
+  console.log(dailySchedules);
 
   // Render available hours
   hoursLoad({date})
