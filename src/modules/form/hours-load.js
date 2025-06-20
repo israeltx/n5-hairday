@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import { openingHours } from '../../utils/opening-hours.js'
+import { hoursClick } from './hours-click.js'
 
 // Select the hours list
 const hours = document.getElementById('hours')
@@ -35,6 +36,9 @@ export function hoursLoad({date}) {
 
     hours.append(li)
   })
+
+  // Add the hour-selected class to available hours
+  hoursClick()
 }
 
 function hourHeaderAdd(title) {
