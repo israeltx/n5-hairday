@@ -42,7 +42,6 @@ form.onsubmit = (event) => {
     // Generate ID
     const id = new Date().getTime()
 
-    console.log({id, name, when});
   } catch (error) {
     alert('Não foi possível realizar o agendamento')
     console.log(error);
